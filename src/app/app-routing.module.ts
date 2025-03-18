@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'publicar-hilo',
+    loadChildren: () => import('./page/publicar-hilo/publicar-hilo.module').then( m => m.PublicarHiloPageModule)
   }
 ];
 @NgModule({
