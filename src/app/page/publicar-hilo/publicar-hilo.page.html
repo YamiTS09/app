@@ -1,13 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>publicar-hilo</ion-title>
+    <ion-icon slot="start" name="close-outline" routerLink="/tabs/inicio"></ion-icon>
+    <ion-title>Nuevo hilo</ion-title>
+    <ion-icon slot="end" name="copy-outline"></ion-icon>
+    <ion-icon slot="end" name="ellipsis-horizontal-circle-outline"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">publicar-hilo</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <app-nuevo-hilo></app-nuevo-hilo>
 </ion-content>
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tus seguidores pueden responder y citar</ion-title>
+    <ion-button slot="end" color="dark" shape="round">Publicar</ion-button>
+  </ion-toolbar>
+</ion-footer>
