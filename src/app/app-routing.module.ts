@@ -8,29 +8,35 @@ const routes: Routes = [
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+    loadChildren: () => import('./inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
     path: 'buscar',
-    loadChildren: () => import('./buscar/buscar.module').then( m => m.BuscarPageModule)
+    loadChildren: () => import('./buscar/buscar.module').then(m => m.BuscarPageModule)
   },
   {
     path: 'hilo',
-    loadChildren: () => import('./hilo/hilo.module').then( m => m.HiloPageModule)
+    children: [
+      { 
+        path: '', 
+        loadChildren: () => import('./hilo/hilo.module').then(m => m.HiloPageModule) 
+      },
+      { 
+        path: 'publicar-hilo', 
+        loadChildren: () => import('./page/publicar-hilo/publicar-hilo.module').then(m => m.PublicarHiloPageModule) 
+      }
+    ]
   },
   {
     path: 'actividad',
-    loadChildren: () => import('./actividad/actividad.module').then( m => m.ActividadPageModule)
+    loadChildren: () => import('./actividad/actividad.module').then(m => m.ActividadPageModule)
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
-  {
-    path: 'publicar-hilo',
-    loadChildren: () => import('./page/publicar-hilo/publicar-hilo.module').then( m => m.PublicarHiloPageModule)
+    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule)
   }
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

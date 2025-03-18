@@ -13,7 +13,7 @@ export class NuevoHiloComponent  implements OnInit {
   constructor(private router: Router) {}
 
   irAPublicarHilo() {
-    this.router.navigate(['/publicar-hilo']); 
+    this.router.navigate(['/hilo/publicar-hilo']);
   }
 
   ngOnInit() {}
