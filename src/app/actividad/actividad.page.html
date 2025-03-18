@@ -1,13 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>actividad</ion-title>
+    <ion-title>Actividad</ion-title>
+    <ion-segment mode="ios">
+      <ion-segment-button value="Todos" content-id="Todos">
+        <ion-label>Todos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Solicitudes" content-id="Solicitudes">
+        <ion-label>Solicitudes</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Respuestas" content-id="Respuestas">
+        <ion-label>Respuestas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Menciones" content-id="Menciones">
+        <ion-label>Menciones</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Citas" content-id="Citas">
+        <ion-label>Citas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Repost" content-id="Repost">
+        <ion-label>Repost</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">actividad</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-segment-view>
+    <ion-segment-content id="Todos">Anterior
+    </ion-segment-content>
+    <ion-segment-content id="Solicitudes">Second</ion-segment-content>
+    <ion-segment-content id="Respuestas">Third</ion-segment-content>
+    <ion-segment-content id="Menciones">Third</ion-segment-content>
+    <ion-segment-content id="Citas">Third</ion-segment-content>
+    <ion-segment-content id="Repost">Third</ion-segment-content>
+  </ion-segment-view>
 </ion-content>
