@@ -1,0 +1,42 @@
+.thread-item {
+    align-items: flex-start; 
+    padding: 10px;
+  }
+  
+  .username {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .thread-input {
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+  }
+  
+  .thread-input::placeholder {
+    color: #aaa;
+  }
+  
+  .icon-container {
+    display: flex;
+    gap: 12px; 
+    padding-top: 8px;
+    align-items: center; 
+  }
+  
+  .icon-container ion-icon {
+    font-size: 22px; 
+    color: #666; 
+    cursor: pointer; 
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .icon-container ion-icon:hover {
+    color: black; 
+  }
+  
