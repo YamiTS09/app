@@ -1,13 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <img src="assets/images/threads.png" alt="Threads Icon" class="threads-icon">
+    <ion-segment color="dark">
+      <ion-segment-button value="parati" content-id="parati">
+        <ion-label>Para ti</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="seguidos" content-id="seguidos">
+        <ion-label>Seguidos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-segment-view>
+    <ion-segment-content id="parati">
+    </ion-segment-content>
+    <ion-segment-content id="seguidos"></ion-segment-content>
+  </ion-segment-view>
 </ion-content>
