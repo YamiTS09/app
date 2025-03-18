@@ -1,0 +1,7 @@
+{
+  "name": "threads",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
