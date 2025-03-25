@@ -1,13 +1,178 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>actividad</ion-title>
+    <ion-title>Actividad</ion-title>
+    <ion-segment mode="ios">
+      <ion-segment-button value="Todos" content-id="Todos">
+        <ion-label>Todos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Solicitudes" content-id="Solicitudes">
+        <ion-label>Solicitudes</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Respuestas" content-id="Respuestas">
+        <ion-label>Respuestas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Menciones" content-id="Menciones">
+        <ion-label>Menciones</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Citas" content-id="Citas">
+        <ion-label>Citas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Repost" content-id="Repost">
+        <ion-label>Repost</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">actividad</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-segment-view>
+    <ion-segment-content id="Todos">Anterior
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Joss_S0  <span class="hora">Ahora</span></h2>
+            <p>Te mencionó</p>
+            <p class="mencion">Yamii_leeth1</p>
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <ion-icon name="share-outline"></ion-icon>
+            <ion-icon name="send-outline"></ion-icon>
+
+          </ion-label>
+        </ion-item>    
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+          </ion-avatar>
+          <ion-label> 
+            <h2>Yamii_leeth1<span class="hora">1 d</span></h2>
+            <p>Vamos a las albercas</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-segment-content>
+    <ion-segment-content id="Solicitudes">
+      Anterior
+      <ion-list>
+        <ion-item id="solicitud">
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+          </ion-avatar>
+          <ion-label>
+            <h2>yamii__leeth1 <span class="hora">Hace 6 días</span></h2>
+            <p>Solicitud de seguidor</p>
+          </ion-label>
+          <ion-button color="light" onclick="aceptarSolicitud()">Confirmar</ion-button>
+          <ion-button color="light" onclick="rechazarSolicitud()">✖</ion-button>
+        </ion-item>
+    </ion-list></ion-segment-content>
+    <ion-segment-content id="Respuestas">  <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Joss_S0  <span class="hora">Ahora</span></h2>
+          <p>Te mencionó</p>
+          <p class="mencion">Yamii_leeth1</p>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="share-outline"></ion-icon>
+          <ion-icon name="send-outline"></ion-icon>
+
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Yamii_leeth1</h2>
+          <p>I've got a bad feeling about this...</p>
+        </ion-label>
+      </ion-item>
+    </ion-list></ion-segment-content>
+    <ion-segment-content id="Menciones">  <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Joss_S0  <span class="hora">Ahora</span></h2>
+          <p>Te mencionó</p>
+          <p class="mencion">Yamii_leeth1</p>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="share-outline"></ion-icon>
+          <ion-icon name="send-outline"></ion-icon>
+
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Yamii_leeth1</h2>
+          <p>I've got a bad feeling about this...</p>
+        </ion-label>
+      </ion-item>
+    </ion-list></ion-segment-content>
+    <ion-segment-content id="Citas">  <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Joss_S0  <span class="hora">Ahora</span></h2>
+          <p>Te mencionó</p>
+          <p class="mencion">Yamii_leeth1</p>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="share-outline"></ion-icon>
+          <ion-icon name="send-outline"></ion-icon>
+
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Yamii_leeth1</h2>
+          <p>I've got a bad feeling about this...</p>
+        </ion-label>
+      </ion-item>
+    </ion-list></ion-segment-content>
+    <ion-segment-content id="Repost">  <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Joss_S0  <span class="hora">Ahora</span></h2>
+          <p>Te mencionó</p>
+          <p class="mencion">Yamii_leeth1</p>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="share-outline"></ion-icon>
+          <ion-icon name="send-outline"></ion-icon>
+
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>Yamii_leeth1</h2>
+          <p>I've got a bad feeling about this...</p>
+        </ion-label>
+        
+      </ion-item>
+    </ion-list></ion-segment-content>
+  </ion-segment-view>
 </ion-content>
