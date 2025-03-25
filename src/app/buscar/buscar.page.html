@@ -4,17 +4,15 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Buscar</ion-title>
-    <ion-searchbar></ion-searchbar>
-  </ion-toolbar>
-  <ion-toolbar>
   </ion-toolbar>
 
-
   <ion-toolbar>
-    <ion-searchbar>
-      [(ngModel)]="searchTerm"
+    <ion-searchbar
+      [(ngModel)]="searchTerms"
       (ionInput)="filterItems()"
-      placeholder="Buscar usuarios"
+      placeholder="Buscar usuarios">
     </ion-searchbar>
   </ion-toolbar>
  </ion-header>
+
+  

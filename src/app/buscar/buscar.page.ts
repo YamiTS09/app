@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buscar.page.scss'],
   standalone: false
 })
-export class BuscarPage implements OnInit {
+export class BuscarPage {
+  searchTerms: string = '';
+
 
   constructor() { }
 
-  ngOnInit() {
+  filterItems() {
+    console.log('buscando:', this.searchTerms);
   }
 
 }
