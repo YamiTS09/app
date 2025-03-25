@@ -1,15 +1,28 @@
 <ion-item class="thread-item">
-  <ion-avatar slot="end" style="height: 80px; width: 80px;">
-    <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-  </ion-avatar>
+  <div class="profile-container">
+    <ion-avatar class="profile-avatar">
+      <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
 
-  <div>
-    <h2 class="name" style="margin-left: 10px;">Yamileth Jimenez</h2>
-    <p class="username" style="margin-left: 10px;">yamii_leeth1</p>
-    <br>
-    <ion-buttons>
-    <ion-button expand="block" style="margin:10px">Editar perfil</ion-button>
-    <ion-button expand="block">Compartir perfil</ion-button>
-  </ion-buttons>
+    <div class="profile-info">
+      <h2 class="name">Yamileth Jimenez</h2>
+      <p class="username">yamii_leeth1</p>
+
+      <ion-chip class="followers">
+        <ion-avatar><img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg"/></ion-avatar>
+        <ion-avatar><img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg"/></ion-avatar>
+        <p> 27 seguidores</p>
+      </ion-chip>
+
+      <div class="button-container">
+        <ion-buttons>
+        <ion-button class="transparent-button">Editar perfil</ion-button>
+        <ion-button class="transparent-button">Compartir perfil</ion-button>
+        </ion-buttons>
+      </div>
+    </div>
   </div>
+</ion-item>
+<ion-item>
+  <app-nuevo-hilo></app-nuevo-hilo>
 </ion-item>
