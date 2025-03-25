@@ -42,43 +42,32 @@
             <ion-icon name="send-outline"></ion-icon>
 
           </ion-label>
-        </ion-item>
+        </ion-item>    
         <ion-item>
           <ion-avatar slot="start">
             <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
           </ion-avatar>
-          <ion-label>
-            <h2>Yamii_leeth1</h2>
-            <p>I've got a bad feeling about this...</p>
+          <ion-label> 
+            <h2>Yamii_leeth1<span class="hora">1 d</span></h2>
+            <p>Vamos a las albercas</p>
           </ion-label>
         </ion-item>
       </ion-list>
     </ion-segment-content>
-    <ion-segment-content id="Solicitudes">  <ion-list>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2>Joss_S0  <span class="hora">Ahora</span></h2>
-          <p>Te mencionó</p>
-          <p class="mencion">Yamii_leeth1</p>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="chatbubble-outline"></ion-icon>
-          <ion-icon name="share-outline"></ion-icon>
-          <ion-icon name="send-outline"></ion-icon>
-
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2>Yamii_leeth1</h2>
-          <p>I've got a bad feeling about this...</p>
-        </ion-label>
-      </ion-item>
+    <ion-segment-content id="Solicitudes">
+      Anterior
+      <ion-list>
+        <ion-item id="solicitud">
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg">
+          </ion-avatar>
+          <ion-label>
+            <h2>yamii__leeth1 <span class="hora">Hace 6 días</span></h2>
+            <p>Solicitud de seguidor</p>
+          </ion-label>
+          <ion-button color="light" onclick="aceptarSolicitud()">Confirmar</ion-button>
+          <ion-button color="light" onclick="rechazarSolicitud()">✖</ion-button>
+        </ion-item>
     </ion-list></ion-segment-content>
     <ion-segment-content id="Respuestas">  <ion-list>
       <ion-item>

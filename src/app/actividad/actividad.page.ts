@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActividadPage implements OnInit {
 
+  solicitudAceptada: boolean | null = null;
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  aceptarSolicitud() {
+    this.solicitudAceptada = true;
   }
 
+  rechazarSolicitud() {
+    this.solicitudAceptada = false;
+  }
 }
