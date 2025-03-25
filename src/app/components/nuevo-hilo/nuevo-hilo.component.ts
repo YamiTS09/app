@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -8,7 +9,8 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./nuevo-hilo.component.scss'],
   imports: [IonicModule]
 })
-export class NuevoHiloComponent  implements OnInit {
+export class NuevoHiloComponent implements OnInit {
+  image: string = ''; 
 
   constructor(private router: Router) {}
 
@@ -16,6 +18,35 @@ export class NuevoHiloComponent  implements OnInit {
     this.router.navigate(['/hilo/publicar-hilo']);
   }
 
-  ngOnInit() {}
+  async abrirGaleria() {
+    try {
+      const image = await Camera.getPhoto({
+        quality: 90,
+        allowEditing: false,
+        resultType: CameraResultType.Uri, 
+        source: CameraSource.Photos  
+      });
 
+      this.image = image.webPath || ''; 
+    } catch (error) {
+      console.error('Error al seleccionar la foto:', error);
+    }
+  }
+
+  async abrirCamara() {
+    try {
+      const image = await Camera.getPhoto({
+        quality: 90,
+        allowEditing: false,
+        resultType: CameraResultType.Base64,
+        source: CameraSource.Camera  
+      });
+
+      this.image = 'data:image/jpeg;base64,' + image.base64String;
+    } catch (error) {
+      console.error('Error al tomar la foto:', error);
+    }
+  }
+
+  ngOnInit() {}
 }
