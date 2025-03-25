@@ -1,4 +1,4 @@
- <header>
+ <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -8,4 +8,13 @@
   </ion-toolbar>
   <ion-toolbar>
   </ion-toolbar>
-</header>
+
+
+  <ion-toolbar>
+    <ion-searchbar>
+      [(ngModel)]="searchTerm"
+      (ionInput)="filterItems()"
+      placeholder="Buscar usuarios"
+    </ion-searchbar>
+  </ion-toolbar>
+ </ion-header>
