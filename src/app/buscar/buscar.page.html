@@ -1,13 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>buscar</ion-title>
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Buscar</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar >
+    <ion-searchbar
+      [(ngModel)]="searchTerms"
+      (ionInput)="filterItems()"
+      placeholder="Buscar usuarios"
+      showClearButton="always"
+      animated="true">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">buscar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let user of filteredUsers"  lines="none">
+      <ion-avatar >
+        <ion-img [src]="user.image" ></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ user.username }}</h2>
+        <p>{{ user.name }}</p>
+        <p>{{ user.followers| number }}.seguidores</p>
+      </ion-label>
+      <ion-button
+      shape="round"
+      fill="outline"
+      [color]="user.following ? 'danger' : 'primary'"
+      (click)="followUser(user)">
+    
+        {{ user.following ? 'Siguiendo' : 'Seguir' }}
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>
