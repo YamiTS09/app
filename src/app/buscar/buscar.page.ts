@@ -12,8 +12,8 @@ export class BuscarPage implements OnInit {
 
   usuarios = [
     { username: 'capi_team',name:'capibaras🦫✨', followers: 1200, following: false,image:'assets/images/capi.jpg' },
-    { username: 'madai_loc', followers: 950, following: true ,image:'assets/imgs/madai-profile.jpg'},
-    { username: 'teoch_bill', followers: 470, following: false ,image:'assets/imgs/teoch-profile.jpg'},
+    { username: 'buss_ani',name:'Ana✨', followers: 950, following: true ,image:'assets/images/toki.jpg'},
+    { username: 'teoch_bill',name:'⛓️Teofilo⛓️', followers: 470, following: false ,image:'assets/images/billie.jpeg'},
   ];
 
   filteredUsers = [...this.usuarios]; 
