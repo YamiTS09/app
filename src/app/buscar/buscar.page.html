@@ -1,28 +1,38 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Buscar</ion-title>
   </ion-toolbar>
 
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-searchbar
       [(ngModel)]="searchTerms"
       (ionInput)="filterItems()"
-      placeholder="Buscar usuarios">
+      placeholder="Buscar usuarios"
+      showClearButton="always"
+      animated="true">
     </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-list>
-    <ion-item *ngFor="let user of filteredUsers">
+    <ion-item *ngFor="let user of filteredUsers"  lines="none">
+      <ion-avatar >
+        <ion-img [src]="user.image" ></ion-img>
+      </ion-avatar>
       <ion-label>
         <h2>{{ user.username }}</h2>
-        <p>{{ user.followers}}seguidores</p>
+        <p>{{ user.followers| number }}seguidores</p>
       </ion-label>
-      <ion-button [color]="user.following ? 'danger' : 'primary'" (click)="followUser(user)">
+      <ion-button
+      shape="round"
+      fill="outline"
+      [color]="user.following ? 'danger' : 'primary'"
+      (click)="followUser(user)">
+    
         {{ user.following ? 'Siguiendo' : 'Seguir' }}
       </ion-button>
     </ion-item>
