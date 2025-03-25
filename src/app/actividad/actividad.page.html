@@ -1,30 +1,36 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Actividad</ion-title>
-    <ion-segment mode="ios">
-      <ion-segment-button value="Todos" content-id="Todos">
-        <ion-label>Todos</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Solicitudes" content-id="Solicitudes">
-        <ion-label>Solicitudes</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Respuestas" content-id="Respuestas">
-        <ion-label>Respuestas</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Menciones" content-id="Menciones">
-        <ion-label>Menciones</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Citas" content-id="Citas">
-        <ion-label>Citas</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Repost" content-id="Repost">
-        <ion-label>Repost</ion-label>
-      </ion-segment-button>
-    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
+  
 <ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-segment mode="ios">
+        <ion-segment-button value="Todos" content-id="Todos">
+          <ion-label>Todos</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Solicitudes" content-id="Solicitudes">
+          <ion-label>Solicitudes</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Respuestas" content-id="Respuestas">
+          <ion-label>Respuestas</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Menciones" content-id="Menciones">
+          <ion-label>Menciones</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Citas" content-id="Citas">
+          <ion-label>Citas</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Repost" content-id="Repost">
+          <ion-label>Repost</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
   <ion-segment-view>
     <ion-segment-content id="Todos">Anterior
       <ion-list>
